@@ -8,9 +8,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Libraries -->
-    <!-- link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"-->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"/-->
 
   </head>
 
@@ -35,38 +35,66 @@
         pour l'évènement que vous aimeriez organiser
       </p>
 
+
       <div>
-        <div class="content" id="bar" style="text-align: center">
-          <row>
+        <div class="container-fluid" id="bar" style="text-align: center">
+          <div class="row">
 
             <div class="col-lg-4 col-md-4 col-xs-12">
               <p class="p-input"> Entrez le nom du bar qui vous intéresse</p>
-              <input class="js-name" type="text" placeholder="Bar name"/>
+              <input class="input js-name" type="text" placeholder="Bar name"/>
             </div>
 
             <div class="col-lg-4 col-md-4 col-xs-12">
               <p class="p-input"> Prix à l'heure du bar sélectionné</p>
-              <input class="js-price-by-hour" type="number" placeholder="Price by hour"/>
+              <input class="input js-price-by-hour" type="number" placeholder="Price by hour"/>
             </div>
 
             <div class="col-lg-4 col-md-4 col-xs-12">
               <p class="p-input"> Prix par personne du bar sélectionné</p>
-              <input class="js-price-by-person" type="number" placeholder="Price by person"/>
+              <input class="input js-price-by-person" type="number" placeholder="Price by person"/>
             </div>
 
-          </row>
+          </div>
         </div>
 
-        <div class="col-lg-12" id="booker" style="text-align: center">
+        <div class="container-fluid" id="booker" style="text-align: center">
+          <div class="row">
 
-          <input class="col-lg-4 js-name" type="text" placeholder="Booker name"/>
-          <input class="col-lg-4 js-time" type="number" placeholder="Time in h"/>
-          <input class="col-lg-4 js-persons" type="number" placeholder="Persons"/>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+              <p class="p-input"> Entrez votre nom</p>
+              <input class="input js-name" type="text" placeholder="Booker name"/>
+            </div>
 
+            <div class="col-lg-4 col-md-4 col-xs-12">
+              <p class="p-input"> Nombre d'heure que vous souhaiteriez réserver</p>
+              <input class="input js-time" type="number" placeholder="Time in h"/>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12">
+              <p class="p-input"> Nombre de personnes que vous souhaiteriez inviter</p>
+              <input class="input js-persons" type="number" placeholder="Persons"/>
+            </div>
+
+          </div>
         </div>
 
         <div class="col-lg-12" id="deductible" style="text-align: center">
-          <input class="js-option" type="checkbox" placeholder="Deductible option"/>
+          <p class="p-checkbox"> Souhaitez-vous sélectionner l'option de déductibilité ? </p>
+          <p class="p-input">
+            In case of an accident/theft, Privateaser applies a 5000€ deductible. <br />
+            With that option, you can reduce the deductible amount from 5000€ to 200€ for a few more euros per person.
+          </p>
+
+          <input type="checkbox" id="cbx" style="display: none;">
+            <label for="cbx" class="check">
+              <svg width="18px" height="18px" viewBox="0 0 18 18">
+                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                <polyline points="1 9 7 14 15 4"></polyline>
+              </svg>
+            </label>
+          </input>
+
         </div>
 
         <div class="col-lg-12" id="compute" style="text-align: center">
