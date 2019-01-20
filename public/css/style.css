@@ -65,7 +65,7 @@ a {
   color: #ffffff;
   font-size: 3.2vw;
   text-align: center;
-  padding-top: 130px;
+  padding-top: 90px;
   padding-bottom: 15px;
   font-weight: 600;
   text-transform: uppercase;
@@ -76,16 +76,12 @@ a {
   font-weight: 100;
   text-align: center;
   padding-bottom: 30px;
+  margin-top: 30px;
 }
 
-.simulation input[type=number]::-webkit-inner-spin-button {
-  color: #36d7b7;
-}
-
-.simulation .input {
+.simulation input {
   padding: 0px;
   margin-top: 0px;
-  margin-bottom: 30px;
   padding-left: 12px;
   padding-right: 12px;
   width: 80%;
@@ -100,31 +96,31 @@ a {
 }
 
 .simulation .p-input {
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.1vw;
   font-size: 1.1vw;
   text-align: center;
   padding-bottom: 0px;
   margin-bottom: 0px;
+  margin-top: 30px ;
 }
 
 .simulation .p-checkbox {
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.1vw;
   font-size: 1.5vw;
   padding-bottom: 0;
   margin-bottom: 0;
   color: #36d7b7;
 }
 
-.simulation .icon {
-  font-size: 2vw;
-  color: #36d7b7;
+.simulation .p-checkbox-info {
+  font-size: 1.1vw;
+  text-align: center;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px ;
 }
 
 .simulation button {
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: .5vw;
@@ -143,6 +139,46 @@ a {
 .simulation button:hover {
   background-color: #2db298;
   transition-duration: .5s;
+}
+
+.simulation .actors {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.1vw;
+  font-size: 1.5vw;
+  color: #36d7b7;
+  text-indent:3em;
+}
+
+
+/* ==================================================
+  Popup Styling
+================================================== */
+a {
+  color: #36d7b7 !important;
+  font-size: 1vw;
+}
+
+a span {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -232px;
+  text-align: left;
+  color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background: #2c3e50;
+  border-radius: 3px;
+  box-shadow:0 0 2px rgba(0,0,0,.5);
+  transform: scale(0) rotate(-12deg);
+  transition: all .25s;
+  opacity: 0;
+}
+
+a:hover span, a:focus span{
+  transform: scale(1) rotate(0);
+  opacity: 0.8;
 }
 
 
@@ -206,4 +242,59 @@ a {
   stroke-dashoffset: 42;
   transition: all 0.2s linear;
   transition-delay: 0.15s;
+}
+
+
+/* ==================================================
+  Modal Styling
+================================================== */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal .p-modal {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.1vw;
+  font-size: 1.1vw;
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin-left: 20%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60% !important;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
