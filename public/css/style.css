@@ -86,7 +86,6 @@ a {
   padding-right: 12px;
   width: 80%;
   border: 1px solid;
-  border-radius: 3px;
   border-color: #ccc;
   height: 40px;
   font-size: 17px;
@@ -126,7 +125,6 @@ a {
   padding-top: .5vw;
   padding-bottom: .5vw;
   border: 1px solid;
-  border-radius: 3px;
   border-color: #36d7b7;
   background-color: #36d7b7;
   font-family: 'Open Sans', sans-serif;
@@ -147,6 +145,73 @@ a {
   font-size: 1.5vw;
   color: #36d7b7;
   text-indent:3em;
+}
+
+
+/* ==================================================
+  Arrows input[type=number] Styling
+================================================== */
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 1px solid #ccc;
+  display: inline-flex;
+  height: 40px;
+  width: 80%;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: #212121;
+  opacity: 0.7;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 1rem;
+  height: 2px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.1vw;
+  font-size: 17px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid #ccc;
+  height: 39px;
+  width: 67%;
+  text-align: left;
 }
 
 

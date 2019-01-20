@@ -47,12 +47,22 @@
 
             <div class="col-lg-4 col-md-4 col-xs-12">
               <p class="p-input"> Price per hour for the selected bar</p>
-              <input class="js-price-by-hour" type="number" placeholder="Price per hour"/>
+              <!--input class="js-price-by-hour" type="number" placeholder="Price per hour"/-->
+              <div class="number-input">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input class="js-price-by-hour" min="0" name="quantity" placeholder="Price per hour" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+              </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-xs-12">
               <p class="p-input"> Price per person for the selected bar</p>
-              <input class="js-price-by-person" type="number" placeholder="Price per person"/>
+              <!--input class="js-price-by-person" type="number" placeholder="Price per person"/-->
+              <div class="number-input">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input class="js-price-by-person" min="0" name="quantity" placeholder="Price per person" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+              </div>
             </div>
 
           </div>
@@ -68,12 +78,22 @@
 
             <div class="col-lg-4 col-md-4 col-xs-12">
               <p class="p-input"> Number of hours you wish to book</p>
-              <input class="js-time" type="number" placeholder="Number of hours"/>
+              <!--input class="js-time" type="number" placeholder="Number of hours"/-->
+              <div class="number-input">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input class="js-time" min="0" name="quantity" placeholder="Number of hours" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+              </div>
             </div>
 
             <div class="col-lg-4 col-md-4 col-xs-12">
               <p class="p-input"> Number of persons you wish to invite</p>
-              <input class="js-persons" type="number" placeholder="Number of persons"/><br />
+              <!--input class="js-persons" type="number" placeholder="Number of persons"/><br /-->
+              <div class="number-input">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                <input class="js-persons" min="0" name="quantity" placeholder="Number of persons" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+              </div> <br />
               <a> Fly over to know more about reductions
                 <span>
                   Over 10 persons invited : 10% reduction <br />
